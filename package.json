@@ -1,11 +1,11 @@
 {
   "name": "@code_monk/falert",
-  "private": false,
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:sean9999/falert.js.git"
   },
-  "version": "1.0.1",
+  "private": false,
   "description": "Funky Alerts for the browser",
   "browser": true,
   "files": [
@@ -25,6 +25,11 @@
       "context": "browser",
       "isLibrary": true    ,
       "outputFormat": "esmodule"
+    },
+    "umd": {
+      "source": "./src/js/falert.ts",
+      "context": "browser",
+      "outputFormat": "global"
     }
   },
   "module": "dist/e6s/falert.js",

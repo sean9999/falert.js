@@ -13,8 +13,16 @@
     "./src/index.html"
   ],
   "targets": {
-    "default": {
-      "distDir": "./dist"
+    "html": {
+      "source": "./src/index.html",
+      "context": "browser",
+      "isLibrary": false
+    },
+    "es6": {
+      "source": "./src/js/falert.ts",
+      "context": "browser",
+      "isLibrary": true    ,
+      "outputFormat": "esmodule"
     }
   },
   "browserslist": "> 3%, last 2 versions, not dead",
@@ -23,7 +31,7 @@
     "staticOutPath": "sounds"
   },
   "scripts": {
-    "start": "parcel",
+    "start": "parcel src/index.html --open",
     "build": "parcel build",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"

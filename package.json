@@ -19,10 +19,8 @@
   },
   "browserslist": "> 3%, last 2 versions, not dead",
   "staticFiles": {
-    "staticPath": [
-      "sounds",
-      "./src/sounds"
-    ]
+    "staticPath": "src/sounds",
+    "staticOutPath": "sounds"
   },
   "scripts": {
     "start": "parcel",

@@ -1,10 +1,11 @@
 {
   "name": "@code_monk/falert",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git@github.com:sean9999/falert.js.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Funky Alerts for the browser",
   "browser": true,
   "files": [

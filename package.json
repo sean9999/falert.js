@@ -1,16 +1,17 @@
 {
   "name": "@code_monk/falert",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sean9999/falert.js.git"
+  },
   "version": "1.0.0",
   "description": "Funky Alerts for the browser",
   "browser": true,
   "files": [
     "src/**/*",
     "dist/**/*",
-    "package.json",
-    "tsconfig.json"
-  ],
-  "source": [
-    "./src/index.html"
+    "tsconfig.json",
+    "README.md"
   ],
   "targets": {
     "html": {
@@ -25,6 +26,8 @@
       "outputFormat": "esmodule"
     }
   },
+  "module": "dist/e6s/falert.js",
+  "homepage": "https://github.com/sean9999/falert.js/wiki/Falert",
   "browserslist": "> 3%, last 2 versions, not dead",
   "staticFiles": {
     "staticPath": "src/sounds",

@@ -1,0 +1,36 @@
+{
+  "name": "@code_monk/falert",
+  "version": "1.0.0",
+  "description": "Funky Alerts for the browser",
+  "browser": true,
+  "files": [
+    "src/**/*",
+    "dist/**/*"
+  ],
+  "source": [
+    "./src/index.html"
+  ],
+  "targets": {
+    "default": {
+      "distDir": "./dist"
+    }
+  },
+  "browserslist": "> 3%, last 2 versions, not dead",
+  "staticFiles": {
+    "staticPath": [
+      "src/sounds"
+    ]
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build && cp -rvf ./src/sounds ./dist",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@code_monk",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.4.0",
+    "parcel-plugin-static-files-copy": "^2.6.0"
+  }
+}

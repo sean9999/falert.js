@@ -1,0 +1,50 @@
+html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: center;
+}
+
+main {
+	height: 100%;
+	flex: 8 0 80%;
+	display: flex;
+	flex-direction: row;
+	align-content: stretch;
+	align-items: stretch;
+}
+header, footer {
+	flex: 1 1 2em;
+	align-self: center;
+	text-align: center;
+}
+
+header > nav {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+header > nav a {
+	margin: 0 0.5em;
+}
+
+main > .main {
+	flex: 0 1 66%;
+}
+
+main > aside {
+	flex: 1 1 10%;
+}

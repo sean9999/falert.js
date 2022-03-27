@@ -1,0 +1,131 @@
+
+.falert.container {
+	position: fixed;
+	top: 35px;
+	right: 55px;
+	width: 450px;
+	height: 100px;
+	z-index: 9;
+}
+
+.falert.body {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	z-index: 10;
+	box-shadow: 5px 10px 15px rgba(0,0,0,0.5);
+	padding: 0.5em;
+	border-radius: 10px;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.falert.body.notice {
+	color: brown;
+	border-color: darkblue;
+	background-color: wheat;
+}
+
+.falert.body.fatal {
+	color: yellow;
+	border-color: black;
+	background-color: red;
+}
+
+.falert.body.warning {
+	color: floralwhite;
+	border-color: darkblue;
+	background-color: forestgreen;
+}
+
+
+.falert.body::after {
+	content: "x";
+	border: 1px solid rgba(246, 242, 242, 0.38);
+	text-align: center;
+	display: inline-block;
+	right: 0px;
+	position: absolute;
+	top: 0px;
+	padding: 2px;
+	margin: 5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	font-family: Verdana;
+	color: white;
+	cursor: pointer;
+}
+
+.falert.body::after:hover {
+	color: black;
+	border-color: black;
+}
+
+.breathing {
+	animation-name: breathing;
+	animation-duration: 23s;
+	animation-delay: 3s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: none;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+.swaying {
+	animation-name: swaying;
+	animation-duration: 17s;
+	animation-delay: 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;	
+}
+
+.flyin {
+	transform: scale(0);
+	animation-name: flyin;
+	animation-iteration-count: 1;
+	animation-duration: 250ms;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.falert h2, .falert p {
+	margin: 0;
+	padding: 0;
+	font-size: small;
+}
+
+@keyframes breathing {
+	0% {
+		transform: scale3d(1,1,1) rotate3d(0);
+		box-shadow: 7px 7px 10px rgb(100,100,100);
+	} 50% {
+		transform: scale3d(1.05,1.05,1.05) rotate3d(0,0,1,3deg);
+		box-shadow: 13px 13px 15px rgb(100,100,100);
+	} 75% {
+		transform: scale3d(0.95, 0.95, 0.95) rotate3d(2,1,0,-20deg);
+		box-shadow: 3px 3px 8px rgb(100,100,100);
+	}
+}
+
+@keyframes swaying {
+	0%, 100% {
+		transform: translate(0);
+	}
+	33% {
+		transform: translate(-17px) rotate3d(0,0,1,-2deg);
+	}
+	66% {
+		transform: translate(2px, 10px);
+	}
+}
+
+@keyframes flyin {
+	from {
+		transform: scale(0);
+	} to {
+		transform: scale(1);
+	}
+}

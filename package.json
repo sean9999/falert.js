@@ -5,7 +5,9 @@
   "browser": true,
   "files": [
     "src/**/*",
-    "dist/**/*"
+    "dist/**/*",
+    "package.json",
+    "tsconfig.json"
   ],
   "source": [
     "./src/index.html"
@@ -18,12 +20,13 @@
   "browserslist": "> 3%, last 2 versions, not dead",
   "staticFiles": {
     "staticPath": [
-      "src/sounds"
+      "sounds",
+      "./src/sounds"
     ]
   },
   "scripts": {
     "start": "parcel",
-    "build": "parcel build && cp -rvf ./src/sounds ./dist",
+    "build": "parcel build",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +34,6 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.4.0",
-    "parcel-plugin-static-files-copy": "^2.6.0"
+    "parcel-reporter-static-files-copy": "^1.3.4"
   }
 }

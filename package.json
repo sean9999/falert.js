@@ -1,6 +1,6 @@
 {
 	"name": "@code_monk/falert",
-	"version": "1.0.14",
+	"version": "1.0.15",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:sean9999/falert.js.git"
@@ -12,14 +12,14 @@
 	"private": false,
 	"scripts": {
 		"start": "parcel src/index.html",
-		"build:parcel": "parcel build --public-url=./ --target=demo",
+		"build:parcel": "parcel build --target=demo",
 		"build:es5": "tsc --target es5 --outDir dist/es5",
 		"build:es6": "tsc --target es6 --outDir dist/es6",
 		"build:es2017": "tsc --target es2017 --outDir dist/es2017",
 		"build:es2021": "tsc --target es2021 --outDir dist/es2021",
 		"build:es2022": "tsc --target es2022 --outDir dist/es2022",
 		"copy-assets": "mkdir -p dist/assets/css && cp -f src/css/falert.css dist/assets/css/ && cp -rf src/sounds dist/assets",
-		"build:all": "npm run build:es5 && npm run build:es6 && npm run build:es2017 && npm run build:es2021 && npm run build:es2022 && npm run build:parcel && npm run copy-assets",
+		"build:all": "npm run build:es5 && npm run build:es6 && npm run build:es2017 && npm run build:es2021 && npm run build:es2022 && npm run copy-assets",
 		"prepare": "npm run build:all",
 		"publish": "git push --tags && npm publish --access=public",
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -32,9 +32,7 @@
 	"targets": {
 		"demo": {
 			"source": "./src/index.html",
-			"distDir": "./dist/demo",
-			"context": "browser",
-			"isLibrary": false
+			"distDir": "./dist/demo"
 		}
 	},
 	"main": "dist/es6/falert.js",

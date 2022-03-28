@@ -1,13 +1,22 @@
 {
   "name": "@code_monk/falert",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "git@github.com:sean9999/falert.js.git"
   },
-  "private": false,
   "description": "Funky Alerts for the browser",
+  "type": "module",
+  "sideEffects": false,
   "browser": true,
+  "private": false,
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build",
+    "prepare": "npm run build",
+    "publish": "git push --tags && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "files": [
     "src/**/*",
     "dist/**/*",
@@ -31,7 +40,7 @@
       "context": "browser",
       "outputFormat": "global"
     }
-  },
+  }, 
   "main": "./dist/umd/falert.js",
   "module": "./dist/e6s/falert.js",
   "types": "./dist/index.d.ts",
@@ -40,12 +49,6 @@
   "staticFiles": {
     "staticPath": "src/sounds",
     "staticOutPath": "sounds"
-  },
-  "scripts": {
-    "start": "parcel src/index.html --open",
-    "build": "parcel build",
-    "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@code_monk",
   "license": "ISC",

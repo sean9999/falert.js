@@ -1,6 +1,6 @@
 {
   "name": "@code_monk/falert",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "repository": {
     "type": "git",
     "url": "git@github.com:sean9999/falert.js.git"
@@ -12,7 +12,7 @@
   "private": false,
   "scripts": {
     "start": "parcel src/index.html",
-    "build:parcel": "parcel build --publicUrl='./' --target=demo",
+    "build:parcel": "parcel build --public-url=./ --target=demo",
     "build:es5": "tsc --target es5 --outDir dist/es5",
     "build:es6": "tsc --target es6 --outDir dist/es6",
     "build:es2017": "tsc --target es2017 --outDir dist/es2017",

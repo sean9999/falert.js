@@ -1,11 +1,11 @@
 {
 	"name": "@code_monk/falert",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:sean9999/falert.js.git"
 	},
-	"description": "Funky Alerts for the browser",
+	"description": "Funky Alerts for the desktop browser",
 	"type": "module",
 	"sideEffects": false,
 	"browser": true,
@@ -25,7 +25,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"files": [
-		"src/**/*",
+		"src/ts/falert.ts",
+		"src/css/falert.css",
 		"dist/**/*",
 		"tsconfig.json"
 	],

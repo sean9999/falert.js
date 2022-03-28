@@ -1,20 +1,19 @@
 {
 	"include": [
-		"src/**/*"
+		"src/ts/falert.ts"
 	],
 	"compilerOptions": {
-		"target": "es2021",
-		"module": "es2022",
+		"lib": [
+			"es2021",
+			"dom"
+		],
+		"downlevelIteration": true,
+		"explainFiles": false,
 		"inlineSourceMap": true,
 		"allowJs": true,
 		"declaration": true,
 		"declarationMap": true,
-		"outDir": "dist",
 		"isolatedModules": true,
 		"moduleResolution": "node",
-		"typeRoots": [
-			"node_modules/@types",
-			"src/types"
-		],
 	}
 }

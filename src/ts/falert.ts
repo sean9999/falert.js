@@ -22,8 +22,8 @@ class Falert {
 	static {
 		//	preload audio
 		let sounds = {
-			fatal:  'https://github.com/sean9999/falert.js/raw/master/src/sounds/dramatic.mp3',
-			warning:'https://github.com/sean9999/falert.js/raw/master/src/sounds/concerning.mp3',
+			fatal: 'https://github.com/sean9999/falert.js/raw/master/src/sounds/dramatic.mp3',
+			warning: 'https://github.com/sean9999/falert.js/raw/master/src/sounds/concerning.mp3',
 			notice: 'https://github.com/sean9999/falert.js/raw/master/src/sounds/noteworthy.mp3'
 		};
 		for (const [k, url] of Object.entries(sounds)) {
@@ -85,4 +85,4 @@ class Falert {
 	}
 }
 
-export { Falert, FalertSettings };
+export { Falert };

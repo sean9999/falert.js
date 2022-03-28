@@ -10,7 +10,7 @@ interface FalertSettings {
 	};
 }
 
-const CDN_BASE = 'https://unpkg.com/@code_monk/falert@1.0.10/dist/';
+const CDN_BASE = 'https://unpkg.com/@code_monk/falert@1.0.13/dist/';
 
 class Falert {
 	static instances = new Set<HTMLElement>();
@@ -24,9 +24,9 @@ class Falert {
 	static {
 		//	preload audio
 		let sounds = {
-			fatal: CDN_BASE + 'sounds/dramatic.mp3',
-			warning: CDN_BASE + 'sounds/concerning.mp3',
-			notice: CDN_BASE + 'sounds/noteworthy.mp3'
+			fatal: CDN_BASE + 'assets/sounds/dramatic.mp3',
+			warning: CDN_BASE + 'assets/sounds/concerning.mp3',
+			notice: CDN_BASE + 'assets/sounds/noteworthy.mp3'
 		};
 		for (const [k, url] of Object.entries(sounds)) {
 			const a = new Audio();

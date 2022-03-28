@@ -22,16 +22,18 @@
     "staticPath": "src/sounds",
     "staticOutPath": "sounds"
   },
+  "author": "@code_monk",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.4.0",
+    "parcel": "^2.4.0",
+    "parcel-reporter-static-files-copy": "^1.3.4"
+  },
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
     "prepare": "npm run build",
+    "check": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "@code_monk",
-  "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.4.0",
-    "parcel-reporter-static-files-copy": "^1.3.4"
   }
 }

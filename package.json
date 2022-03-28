@@ -1,6 +1,6 @@
 {
 	"name": "@code_monk/falert",
-	"version": "1.0.13",
+	"version": "1.0.14",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:sean9999/falert.js.git"
@@ -21,7 +21,7 @@
 		"copy-assets": "mkdir -p dist/assets/css && cp -f src/css/falert.css dist/assets/css/ && cp -rf src/sounds dist/assets",
 		"build:all": "npm run build:es5 && npm run build:es6 && npm run build:es2017 && npm run build:es2021 && npm run build:es2022 && npm run build:parcel && npm run copy-assets",
 		"prepare": "npm run build:all",
-		"publish": "git push --tags && npm publish",
+		"publish": "git push --tags && npm publish --access=public",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"files": [

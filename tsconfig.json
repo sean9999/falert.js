@@ -8,8 +8,12 @@
 		"inlineSourceMap": true,
 		"allowJs": true,
 		"declaration": true,
-		"emitDeclarationOnly": true,
+		"declarationMap": true,
 		"outDir": "dist",
-		"declarationMap": true
+		"moduleResolution": "node",
+		"typeRoots": [
+			"node_modules/@types",
+			"src/types"
+		],
 	}
 }

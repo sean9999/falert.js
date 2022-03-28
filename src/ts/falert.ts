@@ -85,4 +85,4 @@ class Falert {
 	}
 }
 
-export { Falert };
+export { Falert, FalertSettings };

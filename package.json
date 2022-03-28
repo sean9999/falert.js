@@ -41,9 +41,9 @@
       "outputFormat": "global"
     }
   }, 
-  "main": "./dist/umd/falert.js",
-  "module": "./dist/e6s/falert.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/umd/falert.js",
+  "module": "dist/module/falert.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://github.com/sean9999/falert.js/wiki/Falert",
   "browserslist": "> 3%, last 2 versions, not dead",
   "staticFiles": {

@@ -1,6 +1,6 @@
 {
   "name": "@code_monk/falert",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git@github.com:sean9999/falert.js.git"
@@ -32,7 +32,9 @@
       "outputFormat": "global"
     }
   },
-  "module": "dist/e6s/falert.js",
+  "main": "./dist/umd/falert.js",
+  "module": "./dist/e6s/falert.js",
+  "types": "./dist/index.d.ts",
   "homepage": "https://github.com/sean9999/falert.js/wiki/Falert",
   "browserslist": "> 3%, last 2 versions, not dead",
   "staticFiles": {

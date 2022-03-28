@@ -28,7 +28,6 @@ class Falert {
 		};
 		for (const [k, url] of Object.entries(sounds)) {
 			const a = new Audio();
-			//a.addEventListener("canplaythrough", console.info, false);
 			a.addEventListener("error", console.error);
 			a.volume = Falert.settings.audio.volume;
 			a.src = url;
@@ -57,7 +56,6 @@ class Falert {
 		domNode.style.top = newTop + 'px';
 		domNode.querySelector('.body').classList.add(type);
 		domNode.addEventListener("animationend", ev => {
-			console.log('animation end', ev);
 			domNode.classList.remove('flyin');
 			domNode.classList.add('swaying');
 		});
@@ -70,7 +68,6 @@ class Falert {
 		domNode.classList.add(type);
 		document.body.appendChild(domNode);
 		Falert.instances.add(domNode);
-		console.log(Falert.settings.sounds[type]);
 		Falert.settings.sounds[type].play();
 	}
 	static getHighestZindex() {

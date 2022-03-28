@@ -1,6 +1,6 @@
 {
   "name": "@code_monk/falert",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "repository": {
     "type": "git",
     "url": "git@github.com:sean9999/falert.js.git"
@@ -18,16 +18,15 @@
     "build:es2017": "tsc --target es2017 --outDir dist/es2017",
     "build:es2021": "tsc --target es2021 --outDir dist/es2021",
     "build:es2022": "tsc --target es2022 --outDir dist/es2022",
-    "copy-assets": "mkdir -p dist/assets && cp -rf src/css dist/assets && cp -rf src/sounds dist/assets",
-    "build:all": "npm run build:es5 && npm run build:es6 && npm run build:es2017 && npm run build:es2021 && npm run build:es2022 && npm run build:parcel",
-    "prepare": "npm run build:parcel && npm run build:tsc",
+    "copy-assets": "mkdir -p dist/assets/css && cp -f src/css/falert.css dist/assets/css/ && cp -rf src/sounds dist/assets",
+    "build:all": "npm run build:es5 && npm run build:es6 && npm run build:es2017 && npm run build:es2021 && npm run build:es2022 && npm run build:parcel && npm run copy-assets",
+    "prepare": "npm run build:all",
     "publish": "git push --tags && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
     "src/**/*",
     "dist/**/*",
-    "lib/**/*",
     "tsconfig.json"
   ],
   "targets": {
@@ -42,7 +41,10 @@
   "types": "dist/es2021/falert.d.ts",
   "module": "dist/es2021/falert.js",
   "homepage": "https://github.com/sean9999/falert.js/wiki/Falert",
-  "browserslist": "> 3%, last 2 versions, not dead",
+  "browserslist": [
+    "last 1 chrome version",
+    "last 1 firefox version"
+  ],
   "staticFiles": {
     "staticPath": "src/sounds",
     "staticOutPath": "sounds"

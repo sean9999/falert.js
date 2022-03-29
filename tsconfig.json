@@ -8,7 +8,6 @@
 			"dom"
 		],
 		"downlevelIteration": true,
-		"explainFiles": false,
 		"inlineSourceMap": true,
 		"allowJs": true,
 		"declaration": true,

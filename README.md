@@ -1,6 +1,6 @@
 # Falert
 
-Falert is a Funky Alert. It's fun, and that's it's only reason it exists. It uses CSS transforms to give the illusion that it's floating above the page.
+Falert is a Funky Alert. It's fun, and that's it's only reason it exists. It uses CSS transforms to give the illusion that it's floating above the page. It can be used to provide user feedback in a colourful and irreverant way. UI elements like this are sometimes called Toast.
 
 ## Installing
 

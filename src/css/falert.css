@@ -6,6 +6,7 @@
 	width: 450px;
 	height: 100px;
 	z-index: 9;
+	background-color: transparent;
 }
 
 .falert.body {

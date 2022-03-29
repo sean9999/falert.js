@@ -1,4 +1,6 @@
 
+const CDN_BASE = 'https://unpkg.com/@code_monk/falert@1.0.13/dist/';
+
 class Falert {
 	static instances = new Set<HTMLElement>();
 	static settings = {
@@ -11,13 +13,12 @@ class Falert {
 	static {
 		//	preload audio
 		let sounds = {
-			fatal:  'https://github.com/sean9999/falert.js/raw/master/src/sounds/dramatic.mp3',
-			warning:'https://github.com/sean9999/falert.js/raw/master/src/sounds/concerning.mp3',
-			notice: 'https://github.com/sean9999/falert.js/raw/master/src/sounds/noteworthy.mp3'
+			fatal: CDN_BASE + 'assets/sounds/dramatic.mp3',
+			warning: CDN_BASE + 'assets/sounds/concerning.mp3',
+			notice: CDN_BASE + 'assets/sounds/noteworthy.mp3'
 		};
 		for (const [k, url] of Object.entries(sounds)) {
 			const a = new Audio();
-			//a.addEventListener("canplaythrough", console.info, false);
 			a.addEventListener("error", console.error);
 			a.volume = Falert.settings.audio.volume;
 			a.src = url;
@@ -47,7 +48,6 @@ class Falert {
 		domNode.style.top = newTop + 'px';
 		domNode.querySelector('.body').classList.add(type);
 		domNode.addEventListener("animationend", ev => {
-			console.log('animation end', ev);
 			domNode.classList.remove('flyin');
 			domNode.classList.add('swaying');
 		});
@@ -60,7 +60,6 @@ class Falert {
 		domNode.classList.add(type);
 		document.body.appendChild(domNode);
 		Falert.instances.add(domNode);
-		console.log(Falert.settings.sounds[type]);
 		Falert.settings.sounds[type].play();
 	}
 

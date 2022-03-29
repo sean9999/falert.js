@@ -34,4 +34,4 @@ Simply click on the falert to close it.
 
 If multiple falerts are launched, the newer one will try to launch slightly lower so that everything is still visible.
 
-[Check out the demo](https://brain.theater/falert) to see it in action.
+[Check out the demo](https://magick.church/posts/falert/) to see it in action.

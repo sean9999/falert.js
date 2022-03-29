@@ -1,2 +1,2 @@
 
-export {Falert, FalertSettings} from '../ts/falert';
+export {Falert} from '../ts/falert';

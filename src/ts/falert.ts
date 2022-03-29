@@ -1,14 +1,3 @@
-interface FalertSettings {
-	insertionNode: HTMLElement;
-	audio: {
-		volume: number;
-	},
-	sounds: {
-		fatal: HTMLAudioElement;
-		warning: HTMLAudioElement;
-		notice: HTMLAudioElement;
-	};
-}
 
 class Falert {
 	static instances = new Set<HTMLElement>();
@@ -34,7 +23,7 @@ class Falert {
 			a.src = url;
 			Falert.settings.sounds[k] = a;
 		}
-	}
+	};
 	static html = `
 	<div class="falert container flyin">
 		<div class="falert body breathing">
@@ -43,6 +32,7 @@ class Falert {
 		</div>
 	</div>
 	`;
+	
 	constructor(head: string, body: string, type: string = "notice") {
 		const t = document.createElement('template');
 		t.innerHTML = Falert.html.trim();
@@ -73,8 +63,9 @@ class Falert {
 		console.log(Falert.settings.sounds[type]);
 		Falert.settings.sounds[type].play();
 	}
-	static getHighestZindex() {
-		let z = 0;
+
+	static getHighestZindex(): number {
+		let z:number = 0;
 		for (let f of Falert.instances) {
 			let i = Number(f.style.zIndex);
 			if (i > z) {
@@ -83,6 +74,7 @@ class Falert {
 		}
 		return z;
 	}
+
 }
 
-export { Falert, FalertSettings };
+export { Falert };

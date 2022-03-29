@@ -19,6 +19,7 @@
 	border-radius: 10px;
 	border-width: 5px;
 	border-style: solid;
+	cursor: pointer;
 }
 
 .falert.body.notice {
@@ -39,28 +40,19 @@
 	background-color: forestgreen;
 }
 
-
 .falert.body::after {
-	content: "x";
-	border: 1px solid rgba(246, 242, 242, 0.38);
+	content: "✖";
+	font-size: x-large;
+	font-family: monospace;
 	text-align: center;
 	display: inline-block;
-	right: 0px;
 	position: absolute;
+	right: 0px;
 	top: 0px;
-	padding: 2px;
-	margin: 5px;
 	width: 25px;
 	height: 25px;
-	border-radius: 25px;
-	font-family: Verdana;
-	color: white;
+	color: rgba(255, 255, 255, 0.666);
 	cursor: pointer;
-}
-
-.falert.body::after:hover {
-	color: black;
-	border-color: black;
 }
 
 .breathing {

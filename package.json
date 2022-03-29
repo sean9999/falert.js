@@ -41,10 +41,9 @@
 			"outputFormat": "global"
 		}
 	}, 
-	"main": "dist/es6/falert.js",
 	"types": "src/types/falert.d.ts",
-	"module": "dist/es6/falert.js",
-	"homepage": "https://github.com/sean9999/falert.js/wiki/Falert",
+	"module": "dist/es2022/falert.js",
+	"homepage": "https://magick.church/posts/falert",
 	"browserslist": "> 3%, last 2 versions, not dead",
 	"staticFiles": {
 		"staticPath": "src/sounds",

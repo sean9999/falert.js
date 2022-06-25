@@ -1,6 +1,6 @@
 # Falert
 
-Falert is a Funky Alert. It's fun, and that's it's only reason it exists. It uses CSS transforms to give the illusion that it's floating above the page. It can be used to provide user feedback in a colourful and irreverant way. UI elements like this are sometimes called Toast.
+Falert is a Funky Alert. It's fun and weird. It uses CSS transforms to give the illusion that it's floating above the page. It can be used to provide user feedback in a colourful and irreverant way. UI elements like this are sometimes called Toast.
 
 ## Installing
 
@@ -34,4 +34,4 @@ Simply click on the falert to close it.
 
 If multiple falerts are launched, the newer one will try to launch slightly lower so that everything is still visible.
 
-[Check out the demo](https://magick.church/posts/falert/) to see it in action.
+[Check out the demo](https://www.seanmacdonald.ca/projects/falert/) to see it in action.

@@ -1,5 +1,4 @@
-
-const CDN_BASE = 'https://unpkg.com/@code_monk/falert@1.0.13/dist/';
+const CDN_BASE = 'https://unpkg.com/@code_monk/falert@latest/dist/';
 
 class Falert {
 	static instances = new Set<HTMLElement>();
@@ -33,7 +32,7 @@ class Falert {
 		</div>
 	</div>
 	`;
-	
+
 	constructor(head: string, body: string, type: string = "notice") {
 		const t = document.createElement('template');
 		t.innerHTML = Falert.html.trim();
@@ -64,7 +63,7 @@ class Falert {
 	}
 
 	static getHighestZindex(): number {
-		let z:number = 0;
+		let z: number = 0;
 		for (let f of Falert.instances) {
 			let i = Number(f.style.zIndex);
 			if (i > z) {

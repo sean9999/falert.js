@@ -1,16 +1,15 @@
-BUILD_FOLDER=build
-REPO=github.com/sean9999/falert.js
-NPM="@code_monk/falert"
-SEMVER := $$(git tag --sort=-version:refname | head -n 1)
 
 build:
-	./build.sh
+	npm run build:all
 
 publish:
-	echo npm publish ${NPM}
+	npm run publish
 
 install:
-	./install.sh
+	npm install
 
 clean:
-	./reset.sh
+	rm -rf .parcel-cache
+	rm -rf ./dist/*
+	rm -rf ./node_modules
+	rm -f package-lock.json

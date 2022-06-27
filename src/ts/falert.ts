@@ -40,7 +40,7 @@ class Falert {
 		domNode.style.zIndex = (Falert.getHighestZindex() + 1).toString(10);
 
 		//	get a new "top" value to push this node down the page
-		let newTop = 0;
+		let newTop = 35;
 		for (let i of Falert.instances) {
 			newTop += i.offsetHeight;
 		}
